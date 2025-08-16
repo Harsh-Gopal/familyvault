@@ -1,0 +1,134 @@
+/* Global styles for FamilyVault Desktop App */
+
+/* Prevent text selection cursor on UI elements */
+.no-select {
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+}
+
+/* Apply no-select to common UI elements */
+button,
+.button,
+nav,
+.nav,
+.card-header,
+.card-title,
+.sidebar,
+.navigation,
+h1, h2, h3, h4, h5, h6,
+.text-muted-foreground,
+.status-indicator,
+.badge {
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+}
+
+/* Allow text selection for content areas */
+input,
+textarea,
+.content,
+.editable,
+p.selectable,
+.text-content {
+  -webkit-user-select: text;
+  -moz-user-select: text;
+  -ms-user-select: text;
+  user-select: text;
+}
+
+/* Smooth transitions for better UX */
+* {
+  transition: background-color 0.2s ease, border-color 0.2s ease, color 0.2s ease;
+}
+
+/* Custom scrollbar for webkit browsers */
+::-webkit-scrollbar {
+  width: 8px;
+  height: 8px;
+}
+
+::-webkit-scrollbar-track {
+  background: transparent;
+}
+
+::-webkit-scrollbar-thumb {
+  background: rgba(0, 0, 0, 0.2);
+  border-radius: 4px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: rgba(0, 0, 0, 0.3);
+}
+
+/* Dark mode scrollbar */
+.dark ::-webkit-scrollbar-thumb {
+  background: rgba(255, 255, 255, 0.2);
+}
+
+.dark ::-webkit-scrollbar-thumb:hover {
+  background: rgba(255, 255, 255, 0.3);
+}
+
+/* Improve button focus states and alignment */
+button:focus-visible,
+.button:focus-visible {
+  outline: 2px solid hsl(var(--ring));
+  outline-offset: 2px;
+}
+
+/* Better button alignment */
+button,
+.button {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0.5rem;
+}
+
+/* Ensure icons in buttons are properly aligned */
+button svg,
+.button svg {
+  flex-shrink: 0;
+}
+
+/* Fix button text alignment */
+button span,
+.button span {
+  display: inline-flex;
+  align-items: center;
+}
+
+/* Prevent dragging on images and other elements */
+img,
+svg,
+.icon {
+  -webkit-user-drag: none;
+  -khtml-user-drag: none;
+  -moz-user-drag: none;
+  -o-user-drag: none;
+  user-drag: none;
+}
+
+/* Improve card hover states */
+.card:hover {
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+}
+
+.dark .card:hover {
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.3);
+}
+
+/* Better loading states */
+.loading {
+  opacity: 0.6;
+  pointer-events: none;
+}
+
+/* Improve modal backdrop */
+.modal-backdrop {
+  backdrop-filter: blur(4px);
+}

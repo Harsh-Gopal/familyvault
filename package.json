@@ -1,0 +1,14 @@
+{
+  "name": "familyvault-monorepo",
+  "version": "1.0.0",
+  "private": true,
+  "scripts": {
+    "dev": "make dev",
+    "build": "make build",
+    "test": "make test",
+    "clean": "make clean"
+  },
+  "devDependencies": {
+    "pnpm": "^8.15.0"
+  }
+}
